@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  agent:
+    image: ubuntu/telegraf:1.19-21.10_beta
+    restart: always
+    volumes:
+        - ${CONF_LOC}:/etc/telegraf/telegraf.conf:ro
+
+
